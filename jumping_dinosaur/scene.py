@@ -18,9 +18,9 @@ class Scene(pygame.sprite.Sprite):
         self.bg1_rect = self.bg1.get_rect()
         self.bg2_rect = self.bg2.get_rect()
         self.bg3_rect = self.bg3.get_rect()
-        self.bg1_rect.left, self.bg1_rect.top = self.x, int(self.HEIGHT / 2.3)
-        self.bg2_rect.left, self.bg2_rect.top = self.bg1_rect.right, int(self.HEIGHT / 2.3)
-        self.bg3_rect.left, self.bg3_rect.top = self.bg2_rect.right, int(self.HEIGHT / 2.3)
+        self.bg1_rect.left, self.bg1_rect.top = self.x, int(self.HEIGHT / 2)
+        self.bg2_rect.left, self.bg2_rect.top = self.bg1_rect.right, int(self.HEIGHT / 2)
+        self.bg3_rect.left, self.bg3_rect.top = self.bg2_rect.right, int(self.HEIGHT / 2)
 
     def move(self):
         self.x = self.x - self.speed
@@ -34,9 +34,9 @@ class Scene(pygame.sprite.Sprite):
             self.bg2_rect = self.bg3_rect
             self.bg3 = pygame.image.load(self.imgs[random.randint(0, 2)]).convert_alpha()
             self.bg3_rect = self.bg3.get_rect()
-        self.bg1_rect.left, self.bg1_rect.top = self.x, int(self.HEIGHT / 2.3)
-        self.bg2_rect.left, self.bg2_rect.top = self.bg1_rect.right, int(self.HEIGHT / 2.3)
-        self.bg3_rect.left, self.bg3_rect.top = self.bg2_rect.right, int(self.HEIGHT / 2.3)
+        self.bg1_rect.left, self.bg1_rect.top = self.x, int(self.HEIGHT / 2)
+        self.bg2_rect.left, self.bg2_rect.top = self.bg1_rect.right, int(self.HEIGHT / 2)
+        self.bg3_rect.left, self.bg3_rect.top = self.bg2_rect.right, int(self.HEIGHT / 2)
         screen.blit(self.bg1, self.bg1_rect)
         screen.blit(self.bg2, self.bg2_rect)
         screen.blit(self.bg3, self.bg3_rect)
