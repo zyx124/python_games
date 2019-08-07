@@ -34,16 +34,20 @@ class Ptera(pygame.sprite.Sprite):
         self.WIDTH = WIDTH
         self.HEIGHT = HEIGHT
         self.added_score = False
-        self.imgs = ['./images/obstacles/flyboy.png']
+        self.imgs = ['./images/obstacles/ptera.png', './images/obstacles/flyboy.png']
         self.flying_count = 0
         self.flying_flag = True
         self.speed = 7
         self.generate()
 
     def generate(self):
+        # self.ptera = pygame.image.load(self.imgs[0]).convert_alpha()
+        # self.ptera_0 = self.ptera.subsurface((0, 0), (80, 69))
+        # self.ptera_1 = self.ptera.subsurface((80, 0), (80, 69))
+
         self.ptera = pygame.image.load(self.imgs[0]).convert_alpha()
-        self.ptera_0 = self.ptera.subsurface((0, 0), (80, 69))
-        self.ptera_1 = self.ptera.subsurface((80, 0), (80, 69))
+        self.ptera_0 = self.ptera.subsurface((0, 0), (92, 81))
+        self.ptera_1 = self.ptera.subsurface((92, 0), (92, 81))
         self.rect = self.ptera_0.get_rect()
         self.rect.left, self.rect.top = self.WIDTH + 30, int(self.HEIGHT / 17)
 

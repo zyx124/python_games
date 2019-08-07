@@ -23,8 +23,8 @@ class Dinosaur(pygame.sprite.Sprite):
                 self.jump_v = self.jump_v0
 
     def be_afraid(self):
-        # self.dinosaur = self.dinosaurs.subsurface((352, 0), (88, 95))
-        self.dinosaur = self.afraid_img.subsurface((0, 0), (38, 62))
+        self.dinosaur = self.dinosaurs.subsurface((352, 0), (88, 95))
+        # self.dinosaur = self.afraid_img.subsurface((0, 0), (38, 62))
 
     def draw(self, screen):
         if self.is_running and not self.is_jumping:
@@ -33,9 +33,11 @@ class Dinosaur(pygame.sprite.Sprite):
                 self.running_count = 0
                 self.running_flag = not self.running_flag
             if self.running_flag:
-                self.dinosaur = self.run_img.subsurface((0, 0), (38, 63))
+                # self.dinosaur = self.run_img.subsurface((0, 0), (38, 63))
+                self.dinosaur = self.dinosaurs.subsurface((176, 0), (88, 95))
             else:
-                self.dinosaur = self.run_img.subsurface((52, 0), (38, 63))
+                #self.dinosaur = self.run_img.subsurface((52, 0), (38, 63))
+                self.dinosaur = self.dinosaurs.subsurface((264, 0), (88, 95))
         screen.blit(self.dinosaur, self.rect)
 
 
