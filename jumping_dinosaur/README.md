@@ -1,5 +1,7 @@
 ## Dinosaur Rush
 
+![scene](https://github.com/zyx124/python_games/blob/master/jumping_dinosaur/Screenshot%20from%202019-09-06%2011-58-25.png)
+
 This is a jumping dinosaur game, just like the one chrome has when there's no internet.
 
 ### Platform
