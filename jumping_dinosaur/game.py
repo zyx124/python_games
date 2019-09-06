@@ -15,13 +15,13 @@ HEIGHT = 400
 
 def gameover_scene(screen, score, font):
     screen.fill(BACKGROUND)
-    head_img = pygame.image.load('./images/others/bao.png').convert_alpha()
-    head_rect = head_img.get_rect()
-    head_rect.left, head_rect.top = WIDTH // 2.5, int(HEIGHT / 6)
-    screen.blit(head_img, head_rect)
+    # head_img = pygame.image.load('./images/others/bao.png').convert_alpha()
+    # head_rect = head_img.get_rect()
+    # head_rect.left, head_rect.top = WIDTH // 2.5, int(HEIGHT / 6)
+    # screen.blit(head_img, head_rect)
     gameover_img = pygame.image.load('./images/others/gameover.png').convert_alpha()
     gameover_rect = gameover_img.get_rect()
-    gameover_rect.left, gameover_rect.top = WIDTH // 3, int(HEIGHT / 1.5)
+    gameover_rect.left, gameover_rect.top = WIDTH // 3, int(HEIGHT / 2)
     screen.blit(gameover_img, gameover_rect)
     restart_img = pygame.image.load('./images/others/restart.png').convert_alpha()
     restart_rect = restart_img.get_rect()
