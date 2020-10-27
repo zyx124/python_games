@@ -15,10 +15,6 @@ HEIGHT = 400
 
 def gameover_scene(screen, score, font):
     screen.fill(BACKGROUND)
-    # head_img = pygame.image.load('./images/others/bao.png').convert_alpha()
-    # head_rect = head_img.get_rect()
-    # head_rect.left, head_rect.top = WIDTH // 2.5, int(HEIGHT / 6)
-    # screen.blit(head_img, head_rect)
     gameover_img = pygame.image.load('./images/others/gameover.png').convert_alpha()
     gameover_rect = gameover_img.get_rect()
     gameover_rect.left, gameover_rect.top = WIDTH // 3, int(HEIGHT / 2)
@@ -64,10 +60,13 @@ def main():
     jump_sound.set_volume(6)
     die_sound = pygame.mixer.Sound("./music/ao.wav")
     die_sound.set_volume(6)
-    pygame.mixer.init()
-    pygame.mixer.music.load("./music/FiluAndDina_-_Funny_Game_Background.mp3")
-    pygame.mixer.music.set_volume(0.6)
-    pygame.mixer.music.play(-1)
+    
+    # TODO: change the music version to .ogg since pygame support difference.
+    #pygame.mixer.init()
+    #pygame.mixer.music.load("./music/FiluAndDina_-_Funny_Game_Background.mp3")
+    #pygame.mixer.music.set_volume(0.6)
+    #pygame.mixer.music.play(-1)
+    
     # instances
     dinosaur = Dinosaur(WIDTH, HEIGHT)
     scene = Scene(WIDTH, HEIGHT)

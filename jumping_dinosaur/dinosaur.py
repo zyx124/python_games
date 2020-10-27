@@ -5,7 +5,7 @@ class Dinosaur(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.HEIGHT = HEIGHT
         self.WIDTH = WIDTH
-        self.imgs = ['./images/dinosaur/dino.png', './images/dinosaur/dino_ducking.png', './images/dinosaur/bao_run.png', './images/dinosaur/afraid_bao.png']
+        self.imgs = ['./images/dinosaur/dino.png', './images/dinosaur/dino_ducking.png']
         self.reset()
 
     def jump(self, time_passed):
@@ -33,10 +33,9 @@ class Dinosaur(pygame.sprite.Sprite):
                 self.running_count = 0
                 self.running_flag = not self.running_flag
             if self.running_flag:
-                # self.dinosaur = self.run_img.subsurface((0, 0), (38, 63))
                 self.dinosaur = self.dinosaurs.subsurface((176, 0), (88, 95))
             else:
-                #self.dinosaur = self.run_img.subsurface((52, 0), (38, 63))
+                
                 self.dinosaur = self.dinosaurs.subsurface((264, 0), (88, 95))
         screen.blit(self.dinosaur, self.rect)
 
@@ -57,8 +56,7 @@ class Dinosaur(pygame.sprite.Sprite):
         self.initial_left = 40
         self.initial_top = int(self.HEIGHT / 1.8)
         self.dinosaurs = pygame.image.load(self.imgs[0]).convert_alpha()
-        self.run_img = pygame.image.load(self.imgs[2]).convert_alpha()
-        self.afraid_img = pygame.image.load(self.imgs[3]).convert_alpha()
+        
         self.dinosaur = self.dinosaurs.subsurface((0, 0), (38, 63))
         self.rect = self.dinosaur.get_rect()
         self.rect.left, self.rect.top = self.initial_left, self.initial_top
